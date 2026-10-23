@@ -1,51 +1,41 @@
-# D1. Topic & Problem Statement: EcoSmart Waste Bank (IoT-Based Waste Recycling System)
+# D1. Topic & Problem Statement
 
-## 1. Nama Aplikasi & Deskripsi Singkat
-* **Nama Aplikasi:** **EcoSmart Waste Bank** (Platform Bank Sampah Pintar Berbasis IoT)
-* **Deskripsi Singkat:** EcoSmart Waste Bank adalah ekosistem perangkat lunak dan perangkat keras terpadu yang merevolusi pengelolaan bank sampah konvensional melalui integrasi teknologi *Internet of Things* (IoT) dan sistem insentif poin digital dinamis. Sistem ini dirancang untuk menjembatani masyarakat (*nasabah*) dengan pengelola bank sampah unit lokal melalui mesin *drop-off* otomatis yang mampu memindai, memilah, dan menimbang jenis sampah (plastik vs nonplastik) secara akurat. Pengguna mendapatkan apresiasi instan berupa akumulasi poin—dengan skema bonus poin ganda pada akhir pekan (*weekend multiplier*)—yang dapat ditukarkan secara fleksibel dengan voucher belanja, pulsa, maupun diskon produk mitra, sehingga tercipta siklus ekonomi sirkular yang berkelanjutan, transparan, dan memotivasi partisipasi publik.
-
----
-
-## 2. Latar Belakang Masalah (*The Problem Statement*)
-* **Siapa yang memiliki masalah?** 
-  1. *Masyarakat / Warga Perumahan & Kampus:* Individu yang peduli lingkungan atau ingin mendaur ulang sampah rumah tangga mereka namun terkendala oleh sistem operasional yang tidak fleksibel.
-  2. *Petugas & Pengelola Bank Sampah Unit:* Operator lapangan yang bertanggung jawab mengelola pencatatan fisik, validasi penyetoran, rekapitulasi bulanan, dan distribusi insentif kepada warga.
-
-* **Bagaimana mereka menanganinya saat ini?** 
-  Saat ini, bank sampah skala unit di lingkungan pemukiman atau kampus masih mengandalkan proses manual berbasis kertas (*paper-based logbook*) dan interaksi tatap muka yang kaku. Warga harus membawa sampah ke lokasi fisik hanya pada hari dan jam operasional tertentu (misalnya Minggu pagi pukul 07.00 - 09.00), mengantre untuk proses penimbangan manual oleh petugas, dan mencatat tabungan poin ke dalam Buku Tabungan Bank Sampah fisik milik pribadi.
-
-* **Mengapa hal tersebut sangat menyulitkan (*painful*)?**
-  1. *Keterbatasan Waktu & Akses:* Jadwal operasional bank sampah konvensional yang sangat terbatas seringkali tidak sinkron dengan kesibukan harian warga, berujung pada keengganan untuk menyetorkan sampah.
-  2. *Risiko Human Error & Transparansi Rendah:* Pencatatan manual menggunakan buku fisik sangat rentan terhadap kesalahan hitung timbangan, salah catat mutasi poin, atau bahkan risiko buku hilang/rusak yang memicu hilangnya kepercayaan warga terhadap saldo poin tabungan mereka.
-  3. *Kurangnya Daya Tarik Insentif:* Sistem poin konvensional yang statis dan kurang transparan gagal membangun kebiasaan jangka panjang (*habit-forming*) bagi masyarakat untuk aktif memilah sampah dari sumbernya secara konsisten.
+## 1. App Name & Description
+* **App Name:** **EcoSmart Waste Bank** (*EcoTrash IoT*)
+* **One-Paragraph Description:** EcoSmart Waste Bank is an IoT-integrated smart waste management platform designed to revolutionize community recycling initiatives. By combining automated drop-off smart bins with dynamic digital point incentives, the system enables residents to seamlessly deposit sorted plastic and non-plastic waste. It automatically calculates points—featuring weekend multiplier bonuses—which users can redeem for shopping vouchers, mobile credits, or partner discounts, fostering a sustainable, transparent, and rewarding circular economy.
 
 ---
 
-## 3. Target Pengguna / Aktor (*Target Users / Actors*)
-Sistem EcoSmart Waste Bank melibatkan tiga aktor utama dengan hak akses dan fungsionalitas yang spesifik:
-1. **Warga / Nasabah (*Resident*):** 
-   * Pengguna akhir yang membawa dan menyetorkan sampah terpilah ke mesin IoT *drop-off*.
-   * Memiliki akses untuk memantau saldo poin *real-time*, melihat riwayat transaksi setoran, dan melakukan penukaran poin (*redemption*) melalui aplikasi seluler atau web portal.
-2. **Petugas Bank Sampah (*Waste Bank Officer*):** 
-   * Operator operasional harian yang memantau status kapasitas mesin *drop-off* IoT.
-   * Bertanggung jawab memverifikasi kondisi fisik kontainer penampungan, melakukan pengangkutan muatan (*collection cycle*), serta memvalidasi penarikan/klaim *reward* warga jika diperlukan.
-3. **Admin Sistem (*System Administrator*):** 
-   * Pengelola tingkat lanjut yang mengontrol data master aplikasi.
-   * Mengatur konfigurasi tarif dasar poin (plastik vs nonplastik), mengelola parameter bonus akhir pekan, memelihara direktori mitra penyedia *reward*, serta mengaudit laporan statistik keseluruhan sistem.
+## 2. The Problem
+* **Who has it?** 
+  1. *Urban Residents / Campus Community:* Individuals who want to recycle household waste but struggle with rigid operating schedules and cumbersome manual procedures.
+  2. *Waste Bank Officers:* Field operators burdened by manual record-keeping, physical weighing, and tedious monthly reporting.
+
+* **How do they deal with it today?** 
+  Conventional waste banks rely heavily on paper-based logbooks and strict, limited operating hours (e.g., Sunday mornings only). Residents must bring sorted waste to physical locations, queue for manual weighing by an officer, and record their accumulated points in personal physical savings booklets.
+
+* **Why is that painful?**
+  1. *Limited Accessibility:* Rigid schedules conflict with daily working hours, discouraging consistent participation.
+  2. *Human Error & Low Transparency:* Manual bookkeeping is prone to calculation errors, misplaced records, and lost booklets, which erodes trust in the community's savings balances.
+  3. *Lack of Engaging Incentives:* Static and opaque reward systems fail to build long-term recycling habits among citizens.
 
 ---
 
-## 4. Ruang Lingkup Sistem (*Project Scope*)
+## 3. Target Users / Actors
+* **Resident:** The primary end-user who drops off sorted waste at IoT bins, tracks real-time point accumulation, and redeems rewards via the app.
+* **Waste Bank Officer:** The operational staff member responsible for monitoring bin capacity thresholds, handling physical waste collection cycles, and verifying reward claims.
+* **System Administrator:** The high-level manager who configures master data, manages waste category point rates, updates partner reward directories, and audits system reports.
 
-### Apa yang AKAN dilakukan aplikasi (In-Scope):
-1. **Otomatisasi Penerimaan Sampah IoT:** Menerima dan memproses sinyal telemetri dari sensor timbangan dan sensor optik/pemilahan pada mesin *drop-off* pintar untuk mengenali jenis sampah (plastik vs nonplastik) beserta berat aktualnya dalam satuan kilogram.
-2. **Kalkulasi Insentif Poin Dinamis:** Menghitung perolehan poin secara otomatis berdasarkan matriks aturan bisnis:
-   * *Hari Kerja (Senin - Jumat):* 3 poin per kg sampah plastik, 2 poin per kg sampah nonplastik.
-   * *Akhir Pekan (Sabtu - Minggu):* Poin ganda, yaitu 6 poin per kg sampah plastik dan 4 poin per kg sampah nonplastik.
-3. **Manajemen Penukaran Hadiah (*Reward Redemption*):** Menyediakan direktori katalog penukaran poin, validasi saldo, dan mekanisme pembuatan token/kupon digital secara instan.
-4. **Pelaporan & Dasbor Analitik:** Menyediakan rekapitulasi data volume sampah terpilah dan total peredaran poin bagi pengelola secara berkala.
+---
 
-### 3 Hal yang TIDAK AKAN dilakukan aplikasi (Out-of-Scope):
-1. *Tidak menyediakan layanan logistik penjemputan sampah dari rumah ke rumah (*on-demand home pick-up*):* Sistem murni berfokus pada mekanisme *drop-off* mandiri di titik-titik mesin IoT yang telah ditentukan.
-2. *Tidak mengelola pemrosesan daur ulang industri secara fisik:* Aplikasi tidak mengatur proses peleburan, pencacahan pabrik, atau rantai pasok industri daur ulang lanjutan setelah sampah diangkut dari mesin.
-3. *Tidak menyediakan fitur pencairan saldo poin menjadi uang tunai (*cash withdrawal* atau *e-wallet cash-out*):* Seluruh poin murni ditukar dalam bentuk nilai manfaat ekonomi alternatif seperti voucher belanja ritel, diskon produk mitra, atau pulsa seluler guna menghindari kompleksitas regulasi keuangan digital.
+## 4. Scope
+* **What the app WILL do:**
+  1. Automate waste categorization (plastic vs. non-plastic) and weight logging via IoT sensor telemetry during drop-off.
+  2. Calculate dynamic rewards based on business rules:
+     * *Weekdays (Mon–Fri):* 3 points/kg for plastic, 2 points/kg for non-plastic.
+     * *Weekends (Sat–Sun):* Double points (6 points/kg for plastic, 4 points/kg for non-plastic).
+  3. Manage reward redemptions through an integrated catalog of vouchers, mobile credits, and discounts.
+* **3 things the app WILL NOT do:**
+  1. *Will not provide on-demand door-to-door waste pickup logistics* (strictly focused on self-service IoT drop-off stations).
+  2. *Will not manage industrial recycling manufacturing processes* (tracks quantities and point valuations only, not physical factory processing).
+  3. *Will not offer direct cash withdrawals or e-wallet cash-outs* (redemptions are limited to vouchers, credits, and partner products to avoid complex digital financial regulations).
