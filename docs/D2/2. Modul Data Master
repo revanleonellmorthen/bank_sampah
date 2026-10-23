@@ -1,0 +1,7 @@
+## 2. Modul Data Master (`Master Data Module`)
+* **Tanggung Jawab:** Modul ini bertugas mengelola seluruh data referensi dan parameter konfigurasi inti yang menjadi landasan operasional sistem, memisahkannya secara tegas dari logika transaksi harian. Melalui modul ini, Administrator memiliki wewenang penuh untuk melakukan sentralisasi pengaturan tarif tukar poin sampah dan manajemen inventaris hadiah, sehingga perubahan aturan bisnis dapat dilakukan secara dinamis tanpa perlu mengubah kode sumber aplikasi.
+* **Fitur Utama:**
+  * **Manajemen Kategori & Tarif Sampah:** Fasilitas administratif (*CRUD*) untuk mendefinisikan klasifikasi jenis sampah (seperti Plastik dan Nonplastik) beserta rasio nilai poin dasar per kilogramnya yang akan menjadi acuan perhitungan sistem.
+  * **Konfigurasi Aturan Insentif Dinamis:** Pengaturan sakelar otomatis (*toggle*) dan parameter untuk fitur pengali bonus (*Weekend Multiplier*), memungkinkan sistem untuk menerapkan aturan poin ganda pada hari Sabtu dan Minggu secara otonom.
+  * **Pengelolaan Etalase Katalog Hadiah:** Antarmuka komprehensif untuk menambah, memperbarui, atau menghapus daftar pilihan hadiah (seperti voucher belanja digital, pulsa, atau barang sembako fisik) lengkap dengan penetapan harga tukar poinnya.
+  * **Kontrol Ketersediaan Stok (*Inventory Setup*):** Penetapan dan penyesuaian batas awal kuota ketersediaan masing-masing *item* hadiah di dalam katalog untuk mencegah terjadinya transaksi penukaran yang melebihi kapasitas persediaan riil bank sampah.
