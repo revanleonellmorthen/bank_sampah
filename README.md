@@ -1,7 +1,7 @@
 # Bank Sampah Digital
 
 ## Deskripsi Singkat
-Aplikasi bank sampah digital untuk merecord setoran bank sampah dan
+Aplikasi bank sampah digital untuk merecord setoran bank sampah bagi warga dan membuat laporan pengumuplan sampah bagi petugas
 
 ---
 
@@ -9,9 +9,9 @@ Aplikasi bank sampah digital untuk merecord setoran bank sampah dan
 
 | Nama | NIM | Username GitHub |
 | :--- | :--- | :--- |
-| Sutan Lutfi Frank Richard | 26110300033 | @lutfifr31 (https://github.com/lutfifr31) |
-| Revan Leonell Morthen | 26110300004 | @revanleonellmorthen (https://github.com/revanleonellmorthen) |
-| Muhammad Hizqil Zakaria | 26110300009 | @ReHizqil23(https://github.com/ReHizqil23) |
+| Sutan Lutfi Frank Richard | 26110300033 | [@lutfifr31](https://github.com/lutfifr31) |
+| Revan Leonell Morthen | 26110300004 | [@revanleonellmorthen](https://github.com/revanleonellmorthen) |
+| Muhammad Hizqil Zakaria | 26110300009 | [@ReHizqil23](https://github.com/ReHizqil23) |
 
 ---
 
@@ -19,7 +19,7 @@ Aplikasi bank sampah digital untuk merecord setoran bank sampah dan
 
 | Kode | Deliverable | Link |
 | :--- | :--- | :--- |
-| D1 | Topic & Problem Statement | [Link](./D1_Topic_Problem_Statement.md) |
+| D1 | Topic & Problem Statement | [Link](docs/D1-Problem & statement.md) |
 | D2 | [Nama Deliverable 2] | [Link](https://link-anda-di-sini) |
 | D3 | [Nama Deliverable 3] | [Link](https://link-anda-di-sini) |
 
