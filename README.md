@@ -9,9 +9,9 @@ Aplikasi bank sampah digital untuk merecord setoran bank sampah dan
 
 | Nama | NIM | Username GitHub |
 | :--- | :--- | :--- |
-| Sutan Lutfi Frank Richard | 26110300033 | [@username1](https://github.com/username1) |
-| Revan Leonell Morthen | 26110300004 | [@username2](https://github.com/username2) |
-| Muhammad Hizqil Zakaria | 26110300009 | [@username3](https://github.com/username3) |
+| Sutan Lutfi Frank Richard | 26110300033 | @lutfifr31 (https://github.com/lutfifr31) |
+| Revan Leonell Morthen | 26110300004 | @revanleonellmorthen (https://github.com/revanleonellmorthen) |
+| Muhammad Hizqil Zakaria | 26110300009 | @ReHizqil23(https://github.com/ReHizqil23) |
 
 ---
 
