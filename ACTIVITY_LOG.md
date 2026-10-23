@@ -1,5 +1,3 @@
-#Activity Log
-
-| DATE | MEMBER | DELIVERABLE | WHAT WAS DONE | TIME SPENT | COMMIT | PR |
-|---|---|---|---|---|---|
-| 23 oktober 2026 | Muhammad Hizqil Zakaria (ReHizqil23) | D5 | Membuat struktur repository awal dan membuat file template | 35 menit | PR #1 |
+| Date | Member | Deliverable | What was done | Time spent | Commit / PR |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 23 Oct 2026 | Muhammad Hizqil Zakaria | D5 | Membuat Struktur Repo dan template awal | 35 min | a1b2c3d |
