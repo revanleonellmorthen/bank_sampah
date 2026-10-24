@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Petugas" as Petugas
+
+rectangle "Modul 3: Pencatatan Setoran" {
+  usecase "Cari Profil Warga" as UC_Cari
+  usecase "Input Setoran Sampah" as UC_Input
+  usecase "Lihat Riwayat Setoran" as UC_Riwayat
+  usecase "Kalkulasi Poin Otomatis" as UC_Kalkulasi
+}
+
+Petugas --> UC_Cari
+Petugas --> UC_Input
+Petugas --> UC_Riwayat
+
+UC_Input .> UC_Kalkulasi : <<include>>
+@enduml
