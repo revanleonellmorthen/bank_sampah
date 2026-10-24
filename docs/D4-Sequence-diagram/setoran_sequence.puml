@@ -1,0 +1,34 @@
+@startuml
+autonumber
+actor "Petugas" as Petugas
+boundary "UI Setoran" as UI
+control "Modul Pencatatan" as ModulDeposit
+control "Modul Master Data" as ModulMaster
+control "Modul Poin & Wallet" as ModulWallet
+database "Database" as DB
+
+Petugas -> UI : Input ID Warga & Berat Sampah (kg)
+UI -> ModulDeposit : POST /setoran (id_warga, berat, kategori)
+activate ModulDeposit
+
+ModulDeposit -> ModulMaster : getTarif(kategori)
+activate ModulMaster
+ModulMaster --> ModulDeposit : return Tarif (misal: 1000 poin/kg)
+deactivate ModulMaster
+
+alt Berat Tidak Valid (<= 0 atau > batas wajar)
+    ModulDeposit --> UI : return Error "Berat tidak valid"
+    UI --> Petugas : Tampilkan pesan error
+else Berat Valid
+    ModulDeposit -> ModulDeposit : Hitung Poin (Berat * Tarif)
+    ModulDeposit -> DB : Simpan Transaksi Setoran
+    ModulDeposit -> ModulWallet : kreditPoin(id_warga, total_poin)
+    activate ModulWallet
+    ModulWallet -> DB : Update Saldo Warga
+    ModulWallet --> ModulDeposit : return Sukses
+    deactivate ModulWallet
+    ModulDeposit --> UI : return Sukses & Total Poin
+    UI --> Petugas : Tampilkan Notifikasi Sukses
+end
+deactivate ModulDeposit
+@enduml
