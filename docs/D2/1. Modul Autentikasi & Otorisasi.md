@@ -1,0 +1,7 @@
+## 1. Modul Autentikasi & Otorisasi (`Auth Module`)
+* **Tanggung Jawab:** Modul ini bertindak sebagai gerbang keamanan utama yang secara ketat memproses verifikasi kredensial dan melindungi seluruh rute aplikasi dari akses yang tidak sah. Modul ini memastikan berjalannya isolasi wewenang melalui mekanisme kontrol akses berbasis peran (*Role-Based Access Control / RBAC*) yang memisahkan hak akses antara Warga, Petugas, dan Admin secara definitif.
+* **Fitur Utama:**
+  * **Otentikasi Multi-Peran Terenkripsi:** Mekanisme *Login* dan *Logout* terpusat yang dilengkapi dengan perlindungan kriptografi (*password hashing* standar industri) untuk mengamankan data sandi pengguna di dalam pangkalan data.
+  * **Manajemen Sesi Berbasis Token:** Pembangkitan, distribusi, dan validasi sesi keamanan menggunakan *JSON Web Token (JWT)*, lengkap dengan pengaturan batas waktu kedaluwarsa sesi (*token expiration*) untuk memitigasi risiko pembajakan akun yang tertinggal aktif.
+  * **Manajemen Profil & Registrasi Akun:** Fasilitas pendaftaran mandiri untuk warga/nasabah baru, pembuatan akun petugas oleh administrator, serta antarmuka pembaruan data demografi mandiri (seperti nama, alamat domisili, dan nomor telepon).
+  * **Alur Pemulihan Kredensial Aman:** Fasilitas "Lupa Kata Sandi" terstruktur yang memungkinkan pengguna memulihkan akses akun mereka yang terkunci secara mandiri melalui verifikasi tautan aman (*secure link verification*).
