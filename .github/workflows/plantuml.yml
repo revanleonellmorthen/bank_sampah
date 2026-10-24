@@ -2,8 +2,13 @@ name: Generate PlantUML Diagrams
 
 on:
   push:
+    branches:
+      - '**'
     paths:
-      - '**.puml'  # Hanya jalan jika ada file .puml yang berubah
+      - '**.puml'
+
+permissions:
+  contents: write
 
 jobs:
   plantuml:
@@ -11,15 +16,13 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
-
-      - name: Generate SVG Diagrams
-        uses: holowinski/plantuml-github-action@main
         with:
-          # Ganti path sesuai lokasi file .puml-mu
-          # -tsvg artinya output berupa SVG
-          args: -v -tsvg docs/usecase/*.puml
+          fetch-depth: 1
 
-      - name: Commit & Push SVG
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Generate SVG via PlantUML Server
+        uses: grassedge/generate-plantuml-action@v1.5
         with:
-          commit_message: "chore: auto-render PlantUML diagrams"
+          path: docs/usecase   # Ganti jika file .puml kamu ada di folder lain
+          message: "Render PlantUML diagrams to SVG"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
