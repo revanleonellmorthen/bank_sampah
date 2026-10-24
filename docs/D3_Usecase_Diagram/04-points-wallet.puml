@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Warga" as Warga
+
+rectangle "Modul 4: Poin & Dompet Digital" {
+  usecase "Lihat Saldo Aktif" as UC_Saldo
+  usecase "Lihat Buku Tabungan (Mutasi)" as UC_Passbook
+}
+
+Warga --> UC_Saldo
+Warga --> UC_Passbook
+@enduml
