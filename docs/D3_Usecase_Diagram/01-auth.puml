@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Warga" as Warga
+actor "Petugas" as Petugas
+actor "Admin" as Admin
+
+rectangle "Modul 1: Autentikasi & Otorisasi" {
+  usecase "Login" as UC_Login
+  usecase "Registrasi Akun" as UC_Registrasi
+  usecase "Kelola Profil" as UC_Profil
+  usecase "Logout" as UC_Logout
+  usecase "Reset Password" as UC_Reset
+}
+
+Warga --> UC_Registrasi
+Warga --> UC_Login
+Warga --> UC_Profil
+Warga --> UC_Logout
+
+Petugas --> UC_Login
+Admin --> UC_Login
+
+UC_Reset .> UC_Login : <<extend>>
+@enduml
