@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Admin" as Admin
+
+rectangle "Modul 2: Data Master" {
+  usecase "Kelola Tarif & Kategori Sampah" as UC_Tarif
+  usecase "Kelola Katalog Hadiah" as UC_Katalog
+  usecase "Kelola Ketersediaan Stok" as UC_Stok
+  usecase "Konfigurasi Weekend Multiplier" as UC_Weekend
+}
+
+Admin --> UC_Tarif
+Admin --> UC_Katalog
+Admin --> UC_Stok
+Admin --> UC_Weekend
+@enduml

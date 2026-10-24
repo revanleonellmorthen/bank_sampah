@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Warga" as Warga
+
+rectangle "Modul 5: Penukaran Hadiah" {
+  usecase "Lihat Etalase Katalog" as UC_Etalase
+  usecase "Tukar Poin (Checkout)" as UC_Tukar
+  usecase "Cek Stok Real-Time" as UC_CekStok
+  usecase "Potong Saldo Poin" as UC_PotongSaldo
+  usecase "Terbitkan Voucher Unik" as UC_Voucher
+}
+
+Warga --> UC_Etalase
+Warga --> UC_Tukar
+
+UC_Tukar .> UC_CekStok : <<include>>
+UC_Tukar .> UC_PotongSaldo : <<include>>
+UC_Tukar .> UC_Voucher : <<include>>
+@enduml

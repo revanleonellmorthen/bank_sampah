@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Admin" as Admin
+actor "Warga" as Warga
+
+rectangle "Modul 6: Pelaporan & Notifikasi" {
+  usecase "Lihat Dasbor Analitik" as UC_Dasbor
+  usecase "Ekspor Laporan (CSV/Excel)" as UC_Ekspor
+  usecase "Terima Notifikasi Setoran" as UC_NotifSetoran
+  usecase "Terima Notifikasi Klaim Hadiah" as UC_NotifKlaim
+}
+
+Admin --> UC_Dasbor
+Admin --> UC_Ekspor
+
+Warga --> UC_NotifSetoran
+Warga --> UC_NotifKlaim
+@enduml
