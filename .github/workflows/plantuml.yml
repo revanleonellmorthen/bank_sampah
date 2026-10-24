@@ -1,0 +1,25 @@
+name: Generate PlantUML Diagrams
+
+on:
+  push:
+    paths:
+      - '**.puml'  # Hanya jalan jika ada file .puml yang berubah
+
+jobs:
+  plantuml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Generate SVG Diagrams
+        uses: holowinski/plantuml-github-action@main
+        with:
+          # Ganti path sesuai lokasi file .puml-mu
+          # -tsvg artinya output berupa SVG
+          args: -v -tsvg docs/usecase/*.puml
+
+      - name: Commit & Push SVG
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-render PlantUML diagrams"
