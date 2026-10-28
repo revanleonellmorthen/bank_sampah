@@ -22,6 +22,8 @@ Aplikasi bank sampah digital untuk merecord setoran bank sampah bagi warga dan m
 | D1 | Topic & Problem Statement | [Link](docs/D1-Problem_&_statement.md) |
 | D2 | [Nama Deliverable 2] | [Link](https://link-anda-di-sini) |
 | D3 | Usecase | [Link](docs/D3_Usecase_Diagram) |
+| D6 | Test Case Design | [Link](docs/D6-Test-Case-Design.md) |
+| D7 | Unit-Tested Code | [Link](src/points.py) · [Test](tests/test_points.py) |
 
 ---
 
@@ -33,6 +35,20 @@ Berikut adalah struktur direktori utama dalam repositori ini:
 ├── src/                   # Kode sumber utama aplikasi
 ├── tests/                 # File pengujian (unit test / integration test)
 ├── README.md              # Dokumentasi utama proyek ini
+```
+
+---
+
+## Cara Menjalankan Test
+
+```bash
+pip install pytest
+python -m pytest
+```
+
+Semua test harus lulus (`11 passed`).
+
+---
 
 
 | Alat AI | Digunakan Untuk | Contoh Penerapan / Implementasi |
