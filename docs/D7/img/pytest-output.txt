@@ -1,0 +1,19 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\asus\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\asus\Documents\Cakyu\SDF01\uas blok A\bank_sampah
+collecting ... collected 11 items
+
+tests/test_points.py::test_tc01_plastik_hari_biasa PASSED                [  9%]
+tests/test_points.py::test_tc02_nonplastik_hari_biasa PASSED             [ 18%]
+tests/test_points.py::test_tc03_plastik_weekend PASSED                   [ 27%]
+tests/test_points.py::test_tc04_nonplastik_weekend PASSED                [ 36%]
+tests/test_points.py::test_tc05_plastik_setengah_kilo_dibulatkan_ke_atas PASSED [ 45%]
+tests/test_points.py::test_tc06_berat_nol_ditolak PASSED                 [ 54%]
+tests/test_points.py::test_tc07_berat_negatif_ditolak PASSED             [ 63%]
+tests/test_points.py::test_tc08_berat_melebihi_batas_ditolak PASSED      [ 72%]
+tests/test_points.py::test_tc09_kategori_tidak_dikenal_ditolak PASSED    [ 81%]
+tests/test_points.py::test_tc10_pembulatan_tepat_setengah_half_up PASSED [ 90%]
+tests/test_points.py::test_tc11_berat_bukan_angka_ditolak PASSED         [100%]
+
+============================= 11 passed in 0.13s ==============================
