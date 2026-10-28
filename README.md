@@ -22,6 +22,7 @@ Aplikasi bank sampah digital untuk merecord setoran bank sampah bagi warga dan m
 | D1 | Topic & Problem Statement | [Link](docs/D1-Problem_&_statement.md) |
 | D2 | [Nama Deliverable 2] | [Link](https://link-anda-di-sini) |
 | D3 | Usecase | [Link](docs/D3_Usecase_Diagram) |
+| D4 | Sequence & Scenario | [Link](docs/D4-Sequence-diagram) |
 | D6 | Test Case Design | [Link](docs/D6-Test-Case-Design.md) |
 | D7 | Unit-Tested Code | [Link](src/points.py) · [Test](tests/test_points.py) |
 
