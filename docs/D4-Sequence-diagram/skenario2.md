@@ -1,8 +1,7 @@
 # Skenario 2: Input Reward setelah penyetoran sampah
 
 ## Penjelasan Skenario
-Skenario ini merupakan alur paling krusial dalam aplikasi karena menjadi jantung operasional di mana sampah fisik yang disetor oleh warga dikonversi menjadi poin digital. Diagram ini memastikan bahwa pencatatan berat oleh Petugas, penarikan tarif dari Master Data, hingga penambahan saldo ke dompet warga (Wallet) terjadi secara akurat, berurutan, dan terhindar dari *human error*.
-
+Skenario ini merepresentasikan daya tarik utama aplikasi sekaligus puncak dari ekosistem ekonomi sirkular, di mana warga menukarkan tabungan poin mereka menjadi hadiah yang bernilai. Diagram ini memastikan bahwa proses pengecekan ketersediaan stok di Katalog Hadiah, validasi kecukupan poin di Dompet Warga (Wallet), hingga pemotongan saldo (debit) berjalan secara ketat dan atomik, sehingga sistem terhindar dari risiko saldo minus (negative balance) atau klaim hadiah fiktif.
 ---
 
 ## Diagram Sequence
