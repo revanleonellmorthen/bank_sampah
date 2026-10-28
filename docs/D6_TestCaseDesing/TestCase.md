@@ -1,3 +1,8 @@
+> **Catatan:** dokumen ini versi lama dan sudah digantikan oleh
+> [`docs/D6-Test-Case-Design.md`](../D6-Test-Case-Design.md), yang memakai tarif
+> resmi D1 (Plastik 3 poin/kg, Nonplastik 2 poin/kg) dan 11 test case.
+> Tarif 1.000 poin/kg di bawah ini tidak dipakai lagi.
+
 # D6. Test Case Design (1 Scenario)
 
 **Skenario yang Dipilih:** Skenario 1 - Input Setoran Sampah (Petugas)
