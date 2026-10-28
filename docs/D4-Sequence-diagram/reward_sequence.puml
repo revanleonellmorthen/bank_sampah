@@ -1,0 +1,47 @@
+@startuml
+autonumber
+
+actor "Warga" as W
+participant "Antarmuka Aplikasi" as UI
+participant "Modul Transaksi\nPenukaran" as RT
+participant "Modul Katalog\nHadiah" as RC
+participant "Modul Poin &\nDompet" as PW
+participant "Modul Notifikasi" as RN
+
+W -> UI: Pilih Hadiah & Klik "Tukar Poin"
+UI -> RT: ProsesKlaimHadiah(ID_Warga, ID_Hadiah)
+
+note right of RT: Fase 1: Pengecekan Ketersediaan Stok
+RT -> RC: CekKetersediaanStok(ID_Hadiah)
+
+alt Stok Hadiah Habis
+    RC --> RT: Status: Stok Kosong (0)
+    RT --> UI: Error: Maaf, stok hadiah habis
+    UI --> W: Tampilkan Pesan Gagal (Stok Habis)
+else Stok Hadiah Tersedia
+    RC --> RT: Status: Stok Valid
+    
+    note right of RT: Fase 2: Validasi dan Pemotongan Saldo
+    RT -> PW: ValidasiDanPotongSaldo(ID_Warga, Harga_Poin)
+    
+    alt Saldo Poin Tidak Cukup
+        PW --> RT: Error: Saldo Kurang
+        RT --> UI: Error: Poin Anda tidak mencukupi
+        UI --> W: Tampilkan Pesan Gagal (Saldo Kurang)
+    else Saldo Poin Mencukupi
+        PW -> PW: Eksekusi Debit (Potong Saldo Warga)
+        PW --> RT: Status: Pemotongan Poin Berhasil
+        
+        note right of RT: Fase 3: Penyelesaian Transaksi
+        RT -> RC: KurangiStokHadiah(ID_Hadiah, 1)
+        RT -> RT: GenerateKodeVoucherUnik()
+        
+        RT -> RN: TriggerNotifikasiSukses(ID_Warga)
+        RN --> W: Push Notification: "Penukaran Berhasil!"
+        
+        RT --> UI: Data Transaksi & Kode Voucher
+        UI --> W: Tampilkan Kode Voucher Digital di Layar
+    end
+end
+
+@enduml
