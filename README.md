@@ -51,7 +51,15 @@ Semua test harus lulus (`11 passed`).
 ---
 
 
-| Alat AI | Digunakan Untuk | Contoh Penerapan / Implementasi |
-| :--- | :--- | :--- |
-| **[ChatGPT / Claude / Gemini]** | *Brainstorming* arsitektur & *Debugging* | Membantu mencari penyebab *error* pada fungsi `[nama_fungsi]` dan memberikan saran optimasi kode. |
-...
+# Penggunaan AI dalam Pengembangan Proyek
+
+Selama proses pengembangan proyek Sistem Bank Sampah Digital ini, kami memanfaatkan alat kecerdasan artifisial (AI). Penggunaan AI di sini murni berfungsi sebagai **partner diskusi (brainstorming partner)** dan asisten penulisan kode. Seluruh hasil *output* dari AI selalu kami tinjau, sesuaikan, dan perbaiki (*fix*) secara manual agar benar-benar sesuai dengan standar tugas.
+
+Berikut adalah rincian implementasi penggunaan AI berdasarkan kontribusi masing-masing anggota:
+
+| Alat AI | Pengguna | Digunakan Untuk | Contoh Penerapan / Implementasi |
+| :--- | :--- | :--- | :--- |
+| **DeepSeek AI** | Muhammad Hizqil Zakaria | *Brainstorming* Alur Sistem (D3) | Membantu merumuskan daftar fitur (use case) apa saja yang bisa dilakukan oleh aktor Warga, Petugas, dan Admin. **Finalisasi oleh kami:** Menyortir *use case* agar memenuhi syarat minimal 8, dan mengatur tata letak diagram agar lurus memanjang ke bawah (tanpa *package*) dengan relasi `<<include>>` dan `<<extend>>` yang tepat. |
+| **DeepSeek AI** | Muhammad Hizqil Zakaria | Penyusunan Skenario (D4) | Membantu menyusun alur untuk 1 skenario utama (Skenario 1: Input Setoran Sampah) beserta alasan pemilihannya. **Finalisasi oleh kami:** Menyesuaikan detail alur *lifeline* (Aktor, UI, Modul) dan memvalidasi *alternative flow* (`alt`) agar logikanya sinkron dengan aturan bisnis. |
+| **DeepSeek AI** | Muhammad Hizqil Zakaria | *Troubleshooting* & Dokumentasi | Membantu mencari solusi saat *library* PlantUML di GitHub Actions gagal berjalan karena masalah *Docker*. **Finalisasi oleh kami:** Memutuskan untuk mengabaikan *pipeline* otomatis tersebut dan mengekspor gambar secara manual ke format PNG demi efisiensi waktu, lalu merapikan *pathing* gambar di file `README.md`. |
+| ... | ... | ... | ... |
